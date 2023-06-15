@@ -40,16 +40,16 @@ img
     
     --white-color: rgba(255, 255, 255, 1);
     --black-color: hsla(0, 0%, 0%, 1);
-    --text-color: hsla(0,0%,100%,1);
+    --text-color: #e6e6e6;
     --button-text-color: hsla(352.8260869565217,79.99999999999999%,54.90196078431373%,1);
     --bg-color: var(--black-color);
     --bg-color-alt: hsla(352.8260869565217,79.99999999999999%,54.90196078431373%,1);
 
     /* ------------ font size -------------------*/
-    --title-font-size: clamp(2rem, 2rem + 4vw, 2.8rem);
+    --title-font-size: clamp(1.5rem, 1.5rem + 2vw , 2.2rem);
     --h2-font-size: clamp(1.25rem, 1.25rem + 3vw, 1.75rem);
     --h3-font-size: clamp(1.125rem, 1.125rem + 2.5vw, 1.25rem);
-    --text-font-size: clamp(.938rem, .938rem + 2.5vw, 1rem);
+    --text-font-size: clamp(.850rem, .850rem + 1vw, 0.96rem);
     --small-font-size: clamp(.813rem, .948rem + 2.5vw, .875rem);
 
     /* ------------ font weight -----------------------*/
@@ -81,26 +81,91 @@ img
     --icon-size: clamp(0.9rem, 0.9rem + 5vw, 3.5rem);
     /* --------- transition --------------*/
     --transition-ease: 400ms ease;
+    --slide-transition: 500ms ease;
     /* -------- z index ------------*/
     --z-index: 10;
     --z-index-below: -99;
 }
 /* ============== UTILITY CLASS =============== */
 .container-bd {
-    max-width: calc(100% - var(--mb-3) * 2);
-    margin-inline: var(--mb-3);
+  
+    padding-inline: var(--mb-3);
+  
 }
+.section 
+{
+    padding-block-start: var(--section-pd-top);
+    padding-inline: var(--pd-2);
+    margin-block-end: var(--mb-3);
+}
+.section-header 
+{
+    margin-block-end: var(--mb-4);
+}
+.grid 
+{
+    display: grid;
+    gap: var(--mb-2);
+}
+.button 
+{
+    font-family: var(--font-text);
+    text-align: center;
+    background-color: var(--white-color);
+    color: var(--black-color);
+    font-weight: 500;
+    display: inline-block;
+    padding-block: var(--pd-3);
+    padding-inline: var(--pd-2);
+    font-size: 1rem;
+    margin-block-start: var(--mb-2);
 
+
+}
+/* -----------------------------------*/
 body 
 {
     background-color: var(--bg-color);
     min-height: 100vh;
 }
-
-
+h1, h2, h3
+{
+    font-weight: var(--font-semi-bold);
+    font-family: var(--font-display);
+    color: var(--white-color);
+}
+h1,h2,h3,p
+{
+    line-height: var(--line-height);
+}
+h1
+{
+    text-align: center;
+    font-size: var(--title-font-size);
+    color: var(--white-color);
+}
+h2 
+{
+    font-size: var(--h2-font-size);
+}
+h3 
+{
+    font-size: var(--h3-font-size);
+}
+p 
+{
+    font-family: var(--font-text);
+    color: var(--text-color);
+    font-size: var(--text-font-size)
+}
+img 
+{
+    max-width: 100%;
+    height: auto;
+}
 nav 
 {
-    block-size: var(--header-nav-block-size);
+   /*  block-size: var(--header-nav-block-size); */
     background-color: transparent;
 }
 
@@ -108,6 +173,7 @@ nav
 header 
 {
     position: relative;
+  
     padding-block-end: var(--section-pd-bottom);
 }
 .header__container 
@@ -138,13 +204,15 @@ header
 .nav 
 {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
+    top: -2rem;
+    padding-inline: 1rem;
+    left: 0;
     display: flex;
     align-items: center;
     background-color: transparent;
     justify-content: space-between;
+    
 }
 .nav__menu 
 {
@@ -190,50 +258,210 @@ header
 {
     object-fit: fill;
 }
-
-
-
-
-
-
-/* ============ JAVASCRIPT CLASS */
-
-/* ---- toggle icon functionality ------ */
-.toggle-clicked
+/* ================= FEATURES =================== */
+.card__title 
 {
-    background-color: var(--black-color);
-    z-index: var(--z-index);
-    font-weight: var(--font-bold);
-    position: absolute;
+    margin-block-end: var(--mb-4);
+}
+.description,
+.soundtrack__description
+{
+    font-weight: 400;
+    color: var(--text-color);
+    margin-block-end: var(--mb-2);
 }
 
-.toggle__line:nth-child(1).toggle-clicked
+/* =========== YOUTUBE ================== */
+.youtube
 {
-    position: absolute;
-    transform: rotate(45deg) translateY(2px);
-    background-color: var(--black-color); 
+    object-fit: fill;
+    padding-block-end: var(--pd-2);
 }
-.toggle__line:nth-child(2).toggle-clicked
+.youtube iframe 
 {
-    position: absolute;
-    transform: rotate(-45deg) translateY(-1px) translateX(-3px); 
-    background-color: var(--black-color);
+    display: block;
+    width: 90%;
+    margin-inline: auto;
+    aspect-ratio: 16 / 9;
+    
 }
-.nav__menu.show-menu 
+/* ========== STORE ==============*/
+.store__container 
 {
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
+}
+
+/* ============== SOUNDTRACK ===========*/
+.soundtrack__img-img
+{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-inline:auto;
+    margin-block-end: var(--mb-3);
+}
+/* ============= SLIDER ==================== */
+.slider__container
+{
+	position: relative;
+	/* this part doesnt matter much*/
+    width: 100%;
+	max-width: 60rem;
+    aspect-ratio:  16 / 9;
+	min-height: 300px;
+    margin-inline: auto;
+	/* -----------*/
+	overflow: hidden;
+}
+.slider__img 
+{
+	position: absolute;
+    top:0;
+    left:0;
+	width: 100%;
+	height: 100%;
+}
+.slider__img-img 
+{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: var(--slide-transition);
+}
+.slider__navigation
+{
+     position: absolute;
+    top:0;
+    left:0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between; 
+}
+
+.slider__navigation i.bx
+{
+    color: #ababab;
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* ---------- slider ------------- */
+.slider__img-img.active
+{
+    transition: var(--slide-transition);
     opacity: 1;
-    left: 0;
-    visibility: visible;
-    z-index: var(--z-index);
 }
-.nav__menu.show-menu .list__item
+
+/* =========== ADDITIONAL ================ */
+.additional__paragraph
 {
-    transform: translateY(0rem);
+    font-size: var(--h3-font-size);
+    color: var(--text-color);
+}
+.additional__paragraph p
+{
+    margin-block-end: var(--mb-2);
+}
+
+/* ============ UNITY ================= */
+.unity
+{
+    background-color: green;
+    background-image: linear-gradient(to bottom, rgba(37, 37, 37, 0.681), rgba(19, 19, 19, 0.256)), 
+    url("https://images.squarespace-cdn.com/content/v1/606d4bb793879d12d807d4c8/1619984695272-X5ZWEPXBSOXKPT26QCT7/Silksong_Promo_02small.jpg?format=1500w");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    text-align: center;
+    margin-block-end: 0;
+}
+.unity.section 
+{
+    margin-block-end: 0;
+}
+.unity__container 
+{
+    color: var(--white-color);
+    
+}
+.unity__description 
+{
+    margin-block-end: var(--mb-1-5);
+}
+.unity__container .button 
+{
+    display: inline-block;
+    margin-inline: auto;
+    margin-block-end: var(--mb-3);
+}
+/* =========== ABOUT ================*/
+.about 
+{
+    background-color: var(--bg-color-alt);
+}
+.about__container img 
+{
+    max-width: 100%;
+    height: auto;
+}
+.company__container 
+{
 
 }
-main 
+.company__container 
 {
-    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.company__container-button
+{
+    margin-inline: auto;
+    color: var(--bg-color-alt);
+    margin-block-end: var(--mb-2);
+}
+
+/* ========== TEAM CONTAINER =============== */
+.team__container 
+{
+    padding-block-start: var(--pd-3);
+    padding-inline: var(--pd-2);
+}
+.team__description 
+{
+    text-align: center;
+}
+.member__container 
+{
+    margin-block-start: var(--mb-3);
+    justify-content: center;
+    align-items: center;
+}
+.member__item 
+{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.member__name 
+{
+    margin-block: var(--mb-2);
+    font-weight: var(--font-bold);
+    font-size: var(--h3-font-size);
+}
+.member__description
+{
+    line-height: 1.8;
+    font-size: var(--small-font-size);
 }
 /* ======================= MEDIA QUERIES ================= */
 
@@ -242,7 +470,10 @@ main
 {
     /* 51.25rem = 820px*/
     
-
+    nav 
+    {
+        margin-block-start: 0;
+    }
     header 
     {
         margin-block-start: var(--mb-4);
@@ -318,7 +549,26 @@ main
     {
         height: 40vh;
     }
-
+    /* --- game store -----*/
+    .store__container 
+    {
+        grid-template-columns: repeat(2, minmax(80px, 1fr));
+    }
+    .slider__container 
+    {
+        min-width: 200px;
+        padding: var(--pd-5);
+        
+    }
+    .slider__img-img 
+    {
+        object-fit: cover;
+        object-position: center;
+    }
+    .slider__navigation i.bx
+    {
+        background-color: rgba(58, 58, 58, 0.4);
+    }
 
 
 }
@@ -330,4 +580,74 @@ main
         padding-block-start: var(--section-pd-top);
         padding-inline: var(--pd-3);
     }
+    .card 
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card:nth-child(even) .card__img
+    {
+        order:1;
+    }
+    .slider__navigation
+    {
+        position: absolute;
+        margin-inline: auto;
+        top:0;
+        left:0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        z-index: 999;
+    }
+
+    .slider__navigation i.bx
+    {
+        color: #ababab;
+        font-size: var(--title-font-size);
+        display: inline-flex;
+        height: 100%;
+        align-items: center;
+        background-color: var(--black-color);
+    }
+}
+
+
+
+/* ============ JAVASCRIPT CLASS */
+
+/* ---- toggle icon functionality ------ */
+.toggle-clicked
+{
+    background-color: var(--black-color);
+    z-index: var(--z-index);
+    font-weight: var(--font-bold);
+    position: absolute;
+
+}
+.toggle__line:nth-child(1).toggle-clicked
+{
+    position: absolute;
+    transform: rotate(45deg) translateY(2px);
+    background-color: var(--black-color); 
+}
+.toggle__line:nth-child(2).toggle-clicked
+{
+    position: absolute;
+    transform: rotate(-45deg) translateY(-1px) translateX(-3px); 
+    background-color: var(--black-color);
+}
+.nav__menu.show-menu 
+{
+    opacity: 1;
+    left: 0;
+    top:0;
+    visibility: visible;
+    z-index: var(--z-index);
+}
+.nav__menu.show-menu .list__item
+{
+    transform: translateY(0rem);
+
 }
