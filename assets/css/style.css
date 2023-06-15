@@ -261,6 +261,12 @@ header
 {
     object-fit: fill;
 }
+/* ======= main ===========*/
+h1.section-header
+{
+    margin-block: var(--mb-3);
+    margin-block-end: var(--mb-4);
+}
 /* ================= FEATURES =================== */
 .card__title 
 {
@@ -627,7 +633,7 @@ header
     .card__description
     {
        
-        padding-block-start: var(--pd-3);
+        padding-block-start: var(--pd-5);
         max-width: 80%;
         padding-inline: var(--pd-1);
     }

@@ -90,6 +90,9 @@
 ##### tramsition 
 ~~~
 --transition-ease: 400ms ease;
+--slide-transition: 500ms ease;
+--reveal-transition: 0.7s ease-out 0.1s;
+--store-item-transition: 0.5s ease-out 0.1s;
 ~~~
 
 #### Utility class
