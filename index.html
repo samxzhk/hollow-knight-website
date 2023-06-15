@@ -10,7 +10,8 @@
     <!--=========== BOX ICON =================-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- ====== JAVASCRIPT ============-->
-    <script defer src='assets/js/script.js'></script>
+    <script defer src='./assets/js/script.js'></script>
+    <script defer src="./assets/js/scrollreveal.js"></script>
     <!--========= CSS ==================-->
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Hollow Knight: Silksong</title>
@@ -79,32 +80,32 @@
                     </article>
                     <article class=" card grid">
                         <div class="card__img">
-                            <img src="./assets/imgs/website_mini_0001_mini2-1.jpg" alt="">
+                            <img src="./assets/imgs/website_mini_0001_mini2-1.jpg" alt="" class="left-position">
                         </div>
                         <div class="card__description">
-                            <h2 class="card__title">
+                            <h2 class="card__title right-position">
                                 Lethal Acrobatic Action
                             </h2>
-                            <p class="description">
+                            <p class="description right-position">
                                 Hornet must master a whole new suite of powerful moves to survive. She'll unleash devastating attacks, learn incredible silken abilities, and craft deadly tools in order to overcome the kingdom's challenges.
                             </p>
-                            <p class="description">
+                            <p class="description right-position">
                                 Over 150 all-new foes stand between Hornet and the shining citadel crowning the kingdom. Beasts and hunters, assassins and kings, monsters and knights - Hornet must face them all with bravery and skill!
                             </p>
                         </div>
                     </article>
                     <article class=" card grid">
                         <div class="card__img">
-                            <img src="./assets/imgs/website_mini_0002_mini1.jpg" alt="">
+                            <img src="./assets/imgs/website_mini_0002_mini1.jpg" class="left-position" alt="">
                         </div>
                         <div class="card__description">
-                            <h2 class="card__title">
+                            <h2 class="card__title right-position">
                                 Beauty and Wonder in a Haunted World
                             </h2>
-                            <p class="description">
+                            <p class="description right-position">
                                 The vast inter-connected world of Hollow Knight: Silksong is brought vividly to life in a traditional, hand-crafted, 2D style. Gilded cities, Lakes of fire,  and misted moors are illustrated in exquisite detail and accompanied by a vibrant orchestral score.
                             </p>
-                            <p class="description">
+                            <p class="description right-position">
                                 In her search for the truth behind her capture, Hornet will befriend surprising strangers, discover shocking secrets and solve ancient mysteries in a kingdom full of wonders.
                             </p>
                         </div>
@@ -142,14 +143,14 @@
             <section class="soundtrack section">
                 <div class="soundtrack__container grid">
                     <div class="soundtrack__img">
-                        <img src="./assets/imgs/album-art-temp_smaller.jpg" alt="" class="soundtrack__img-img">
+                        <img src="./assets/imgs/album-art-temp_smaller.jpg" alt="" class="soundtrack__img-img left-position">
                     </div>
                     <div class="soundtrack__info">
-                        <h2 class="soundtrack__title section-header">A Soulful, Orchestral Score</h2>
-                        <p class="soundtrack__description">
+                        <h2 class="soundtrack__title section-header right-position">A Soulful, Orchestral Score</h2>
+                        <p class="soundtrack__description right-position">
                             Hollow Knight's award-winning composer, Christopher Larkin, brings melancholy melodies, symphonic strings and heart-thumping, soul strumming boss themes to Hornet's adventure.
                         </p>
-                        <a href="#" class="button">Preview The Soundtrack</a>
+                        <a href="#" class="button right-position">Preview The Soundtrack</a>
                     </div>
                 </div>
             </section>
@@ -178,17 +179,17 @@
             </section>
             <!---============ ADDITIONAL ===============-->
             <section class="additional section">
-                <div class="additional__container">
+                <div class="additional__container grid">
                     <img src="./assets/imgs/press_kit.png" alt="">
-                </div>
-                <div class="additional__description">
-                    <p class="additional__paragraph section-header">
-                        If you'd like to write about Hollow Knight, we've a Press Kit full of videos, facts and images.
-                    </p>
-                    <p>
-                        For any additional press enquiries, please contact: press (at) teamcherry.com.au
-                    </p>
-                    <a href="#" class="button">VISIT THE PRESS Kit</a>
+                    <div class="additional__description">
+                        <p class="additional__paragraph section-header">
+                            If you'd like to write about Hollow Knight, we've a Press Kit full of videos, facts and images.
+                        </p>
+                        <p>
+                            For any additional press enquiries, please contact: press (at) teamcherry.com.au
+                        </p>
+                        <a href="#" class="button">VISIT THE PRESS Kit</a>
+                    </div>
                 </div>
             </section>
             <!---============ UNITY =============== -->
@@ -203,7 +204,7 @@
             </section>
             <!---============ TEAM ======================-->
             <section class="about">
-                <div class="about__container">
+                <div class="about__container grid">
                     <div class="company__container">
                         <div class="company__logo">
                             <img src="./assets/imgs/tc.png" alt="">
@@ -257,6 +258,23 @@
        </div>
     </main>
   <!---============ FOOTER --===================-->
-
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="social__container">
+                <ul class="social__list">
+                    <li class="social__item">
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                    </li>
+                    <li class="social__item">
+                        <a href="#"><i class='bx bxl-facebook' ></i></a>
+                    </li>
+                </ul>
+            </div>
+            <p class="footer__description">Hollow Knight is © Copyright 2023 Team Cherry</p>
+        </div>
+    </footer>
 </body>
 </html>
