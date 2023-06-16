@@ -1,4 +1,4 @@
-Hello World
+
 <div align="center">
   
   <h2 align="center">Hollow Knight: Silksong </h2>
@@ -13,7 +13,7 @@ Hello World
 
 ### Screeshots
 
-![Shoppie Desktop Demo](./assets/imgs/website-live-demo.png "Desktop Demo")
+![Hollow Knight Desktop Demo](./assets/imgs/website-live-demo.png "Desktop Demo")
 
 ### Prerequisites
 
